@@ -8,10 +8,11 @@ if (session_status() == PHP_SESSION_NONE) {
 include("./modelos/DatosTablas/obtenerDatos.php"); 
 ?>
 
-<h3 style="padding:5rem;"><i class="fas fa-shopping-cart"></i> &nbsp; NUEVA COMPRA </h3>
+<h3 class="titulo-nueva-compra"><i class="fas fa-shopping-cart"></i> &nbsp; NUEVA COMPRA </h3>
+<hr>
 
-<div class="container">
-<form class="FormularioAjax" action="<?php echo SERVERURL; ?>ajax/compraAjax.php" method="POST" data-form="save" autocomplete="off">
+<div class="container form-compra">
+	<form class="FormularioAjax " action="<?php echo SERVERURL; ?>ajax/compraAjax.php" method="POST" data-form="save" autocomplete="off">
         <div class="row">
             <?php
                 $datosCompra=new obtenerDatosTablas();

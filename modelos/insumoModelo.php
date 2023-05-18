@@ -46,7 +46,7 @@
 
 
 		protected function eliminar_insumo_modelo($id){
-			$sql=ConexionBD::getConexion()->prepare("DELETE FROM insumos where id_insumo=?");
+			$sql=ConexionBD::getConexion()->prepare("UPDATE insumos SET estado_registro=2 where id_insumo=?");
 				
 			$sql->bindParam(1,$id);
 			$sql->execute();

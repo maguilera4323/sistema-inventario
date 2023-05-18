@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="<?php echo SERVERURL; ?>vistas/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo SERVERURL; ?>vistas/css/bootstrap.rtl.css">
 <link rel="stylesheet" href="<?php echo SERVERURL; ?>vistas/css/bootstrap.rtl.min.css">
-<link rel="stylesheet" href="<?php echo SERVERURL; ?>vistas/css/estilos-login.css">
+<!-- <link rel="stylesheet" href="<?php echo SERVERURL; ?>vistas/css/estilos-login.css"> -->
 <link rel="stylesheet" href="<?php echo SERVERURL; ?>vistas/css/estilos-vistas.css">
 <link rel="stylesheet" href="<?php echo SERVERURL; ?>vistas/css/navlateral.css">
 

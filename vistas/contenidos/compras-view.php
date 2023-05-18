@@ -8,7 +8,16 @@ if (session_status() == PHP_SESSION_NONE) {
 include("./modelos/DatosTablas/obtenerDatosCompras.php"); 
 ?>
 
-<h3 style="padding:3rem;"><i class="fas fa-shopping-cart"></i> &nbsp; COMPRAS </h3>
+<div class="container-encabezado">
+<h3 style=""><i class="fas fa-shopping-cart"></i> &nbsp; COMPRAS </h3>
+
+<div class="container-menu" style="">
+    <h5><i class="fas fa-home"></i>&nbsp; 
+    <a href="<?php echo SERVERURL?>home/"> Home </a>
+    / 
+    <a href="<?php echo SERVERURL?>empresas/"> Compras </a></h5>
+</div>
+<hr>
 
 <div class="botones-proveedores">
     <a href="<?php echo SERVERURL?>nuevacompra/"><div class="btn btn-dark btn-lg"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR COMPRA</div></a>
@@ -16,8 +25,9 @@ include("./modelos/DatosTablas/obtenerDatosCompras.php");
     <button type="submit" class="btn btn-success mx-auto btn-lg"><i class="fas fa-file-excel"></i> &nbsp;Descargar Excel</button>
 </div>
 <br>
-<div class="table-responsive">
-    <table id="datos-usuario" class="table table-bordered table-striped text-center">
+<div class="table-responsive-md">
+    <table id="datos-usuario" class="table text-center table-striped datos-usuario">
+        <thead>
         <thead>
             <tr>
                 <th>ID</th>

@@ -30,4 +30,7 @@
 <script src="<?php echo SERVERURL; ?>vistas/js/paginador.js"></script>
 <script src="<?php echo SERVERURL; ?>vistas/js/paginador.min.js"></script>
 <script src="<?php echo SERVERURL; ?>vistas/js/funciones-usuarios.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="<?php echo SERVERURL; ?>vistas/js/chart.min.js"></script>
+<script src="<?php echo SERVERURL; ?>vistas/js/graficos.js"></script>
 

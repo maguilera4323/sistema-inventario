@@ -1,5 +1,4 @@
 
-
 :root{
   --width:280px;
   --pading:10px;
@@ -9,7 +8,7 @@
 }
 
 body{
-  background-color: #acacac;
+  background-color: #e5e5f7;
   
   font-size:18px;
   padding:0;
@@ -205,4 +204,3 @@ body{
 .menu-collapsed .item{
   width: 100px;
 }
-

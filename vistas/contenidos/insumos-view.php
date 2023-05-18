@@ -8,7 +8,16 @@ if (session_status() == PHP_SESSION_NONE) {
 include("./modelos/DatosTablas/obtenerDatos.php"); 
 ?>
 
-<h3 style="padding:3rem;"><i class="fas fa-box-open"></i> &nbsp; INSUMOS </h3>
+<div class="container-encabezado">
+<h3 style=""><i class="fas fa-box-open"></i> &nbsp; INSUMOS </h3>
+
+<div class="container-menu" style="">
+    <h5><i class="fas fa-home"></i>&nbsp; 
+    <a href="<?php echo SERVERURL?>home/"> Home </a>
+    / 
+    <a href="<?php echo SERVERURL?>insumos/"> Insumos </a></h5>
+</div>
+<hr>
 
 <div class="botones-proveedores">
 	<div class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#ModalCrear"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR INSUMO</div>
@@ -17,10 +26,9 @@ include("./modelos/DatosTablas/obtenerDatos.php");
 </div>
 <br>
 <div class="table-responsive">
-    <table id="datos-usuario" class="table table-bordered table-striped text-center datos-usuario">
+    <table id="datos-usuario" class="table table-bordered table-striped datos-usuario">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nombre</th>
                 <th>Categoria</th>
                 <th>Cantidad Maxima</th>
@@ -38,7 +46,6 @@ include("./modelos/DatosTablas/obtenerDatos.php");
                 foreach ($resultado as $fila){
             ?>
             <tr>
-                <td><?php echo $fila['id_insumo']; ?></td>
                 <td><?php echo $fila['nom_insumo']; ?></td>
                 <td><?php echo $fila['categoria']; ?></td>
                 <td><?php echo $fila['cant_max']; ?></td>

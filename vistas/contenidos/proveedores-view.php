@@ -8,7 +8,16 @@ if (session_status() == PHP_SESSION_NONE) {
 include("./modelos/DatosTablas/obtenerDatos.php"); 
 ?>
 
-<h3 style="padding:5rem;"><i class="fas fa-boxes"></i> &nbsp; PROVEEDORES </h3>
+<div class="container-encabezado">
+<h3 style=""><i class="fas fa-boxes"></i> &nbsp; PROVEEDORES </h3>
+
+<div class="container-menu" style="">
+    <h5><i class="fas fa-home"></i>&nbsp; 
+    <a href="<?php echo SERVERURL?>home/"> Home </a>
+    / 
+    <a href="<?php echo SERVERURL?>proveedores/"> Proveedores </a></h5>
+</div>
+<hr>
 
 <div class="botones-proveedores">
 <div class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#ModalCrear"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR PROVEEDOR</div>
@@ -16,11 +25,10 @@ include("./modelos/DatosTablas/obtenerDatos.php");
     <button type="submit" class="btn btn-success mx-auto btn-lg"><i class="fas fa-file-excel"></i> &nbsp;Descargar Excel</button>
 </div>
 <br>
-<div class="table-responsive">
-    <table id="datos-usuario" class="table table-bordered text-center table-striped ">
+<div class="table-responsive-md">
+    <table id="datos-usuario" class="table text-center table-striped datos-usuario">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Nombre</th>
                 <th>RTN</th>
                 <th>Teléfono</th>
@@ -38,7 +46,6 @@ include("./modelos/DatosTablas/obtenerDatos.php");
                 foreach ($resultado as $fila){
             ?>
             <tr>
-                <td><?php echo $fila['id_proveedor']; ?></td>
                 <td><?php echo $fila['nom_proveedor']; ?></td>
                 <td><?php echo $fila['rtn_proveedor']; ?></td>
                 <td><?php echo $fila['tel_proveedor']; ?></td>

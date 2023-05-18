@@ -1,4 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* botones de agregary exportar*/
 .botones-proveedores{
+  margin: 3rem 0 2rem 0;
   padding-left: 16rem;
 }
 
@@ -7,6 +16,7 @@ div .label-actualizar{
   float: left;
   color:black;
 }
+
 
 .modal-title{
   color:black;
@@ -60,6 +70,8 @@ div .label-actualizar{
 }
 
 
+
+
 /* pagina de error */
 .error-404 img{
     display: block;
@@ -89,6 +101,8 @@ div .label-actualizar{
 }
 
 
+
+
 /* botones de las vistas de Configuracion */
 .config-container{
   width: 900px;
@@ -111,23 +125,106 @@ div .label-actualizar{
 }
 
 
+
+
 /* Tablas de las vistas */
-#datos-usuario{     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
-  font-size: 16px;   text-align: left;    border-collapse: collapse; }
 
-#datos-usuario th {     font-size: 18px;     font-weight: normal;     padding: 8px;     background: #0184a5;
-    border-top: 4px solid #0184a5;    border-bottom: 1px solid #fff; color: rgb(0, 0, 0); }
-
-#datos-usuario td {    padding: 8px;     background: #dae2e2;     border-bottom: 1px solid #fff;
-    color: rgb(47, 48, 48);    border-top: 1px solid transparent; }
-
-#datos-usuario tr:hover td { background: #d0dafd; color: #339; }
-
-
-.container-usuarios{
-  margin-top: 30px;
-  background-color: rgb(235, 233, 233);
+div.datos-usuario {
+  display: block;
+ margin: auto;
+ width: 600px;
+ padding:5px;
+ width: 100%;
 }
+/*** Table Styles **/
+
+.datos-usuario {
+    background: white;
+    border-radius:3px;
+    border-collapse: collapse;
+    height: 320px;
+    margin: auto;
+    width: 800px;
+    padding:5px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+    text-align: center;
+}
+
+.datos-usuario th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:18px;
+  font-weight: 100;
+  padding:24px;
+  text-align:center;
+}
+
+.datos-usuario th:first-child {
+ border-top-left-radius:3px;
+}
+
+.datos-usuario th:last-child {
+ border-top-right-radius:3px;
+ border-right:none;
+}
+ 
+.datos-usuario tr {
+ border-top: 1px solid #C1C3D1;
+ border-bottom-: 1px solid #C1C3D1;
+ color:#080808;
+ font-size:16px;
+ font-weight:normal;
+}
+
+.datos-usuario tr:hover td {
+ background:#4E5066;
+ color:#FFFFFF;
+ border-top: 1px solid #22262e;
+}
+
+.datos-usuario tr:first-child {
+ border-top:none;
+}
+
+.datos-usuario tr:last-child {
+ border-bottom:none;
+}
+
+.datos-usuario tr:nth-child(odd) td {
+ background:#EBEBEB;
+}
+
+.datos-usuario tr:nth-child(odd):hover td {
+ background:#4E5066;
+}
+
+.datos-usuario tr:last-child td:first-child {
+ border-bottom-left-radius:3px;
+}
+
+.datos-usuario tr:last-child td:last-child {
+ border-bottom-right-radius:3px;
+}
+
+.datos-usuario td {
+ background:#FFFFFF;
+ padding:20px;
+ text-align:center;
+ vertical-align:middle;
+ font-weight:300;
+ font-size:18px;
+ border-right: 1px solid #C1C3D1;
+}
+
+.datos-usuario td:last-child {
+ border-right: 0px;
+}
+
+
 
 .perfil #input-pefil{
   width: 30px;
@@ -136,4 +233,55 @@ div .label-actualizar{
 .perfil-container{
   width: 12rem;
   margin:0 auto;
+}
+
+
+/* Estilos para pagina home
+ */
+
+ .row-cols-md-3{
+    margin-top: 1rem;
+ }
+
+ .card .card-title{
+    color:white;
+ }
+
+ .card a{
+    text-decoration: none;
+}
+
+
+/* Encabezados en vistas (nombre de la pantalla y menu de navegacion) */
+.container-encabezado{
+  margin-top: 30px;
+  background-color: #e5e5f7;
+}
+
+.container-encabezado h3{
+  padding:0.1rem 0 0 2rem;
+  font-weight: bold;
+}
+
+.container-menu{
+  padding:1rem 1.5rem 0 3rem;
+}
+
+.container-menu h5 a{
+  text-decoration: none;
+  margin:0;
+}
+
+
+/* Estilos para ventana de nueva compra */
+.titulo-nueva-compra{
+  margin:2rem;
+  font-weight: bold;
+}
+
+.form-compra{
+  background-color: white;
+  padding:1.5rem 2rem 1rem 1.5rem;
+  border-radius: 2px 4px 2px;
+  box-shadow: 7px 8px 5px 3px rgba(0, 0, 0, 0.2);
 }

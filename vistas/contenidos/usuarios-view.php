@@ -9,21 +9,27 @@ include("./modelos/DatosTablas/obtenerDatosUsuarios.php");
 include("./modelos/DatosTablas/obtenerDatos.php"); 
 ?>
 
-<div class="container-usuarios">
-<h3 style="padding:2rem;"><i class="fas fa-users-cog"></i> &nbsp; USUARIOS </h3>
+<div class="container-encabezado">
+<h3 style=""><i class="fas fa-users-cog"></i> &nbsp; USUARIOS </h3>
+
+<div class="container-menu" style="">
+    <h5><i class="fas fa-home"></i>&nbsp; 
+    <a href="<?php echo SERVERURL?>home/"> Home </a>
+    / 
+    <a href="<?php echo SERVERURL?>usuarios/"> Usuarios </a></h5>
+</div>
 <hr>
-<br>
 <div class="botones-proveedores">
 	<div class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#ModalCrear"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR USUARIO</div>
 	<button type="submit" class="btn btn-danger mx-auto btn-lg"><i class="fas fa-file-pdf"></i> &nbsp;Descargar PDF</button>
     <button type="submit" class="btn btn-success mx-auto btn-lg"><i class="fas fa-file-excel"></i> &nbsp;Descargar Excel</button>
 </div>
 <br>
-<div class="table-responsive">
-    <table id="datos-usuario" class="table table-bordered table-striped text-center datos-usuario">
+
+<div class="table-responsive-md">
+    <table id="datos-usuario" class="table text-center table-striped datos-usuario">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Usuario</th>
                 <th>Nombre</th>
                 <th>Estado</th>
@@ -41,7 +47,6 @@ include("./modelos/DatosTablas/obtenerDatos.php");
                 foreach ($resultado as $fila){
             ?>
             <tr>
-                <td><?php echo $fila['id_usuario']; ?></td>
                 <td><?php echo $fila['usuario']; ?></td>
                 <td><?php echo $fila['nombre_usuario']; ?></td>
                 <td><?php echo $fila['estado_usuario']; ?></td>
@@ -130,7 +135,7 @@ include("./modelos/DatosTablas/obtenerDatos.php");
                                     <br>
                                     <div class="form-group">
                                         <label class="label-actualizar">Fotografía</label>
-                                        <input type="file" class="form-control" name="imagen_act" id="imagen" maxlength="256" placeholder="Imagen">
+                                        <input type="file" class="form-control" name="imagen_act" id="imagen" maxlength="256" value="<?php echo $fila['correo_electronico']?>" placeholder="Imagen">
                                         <!-- <img src="<?php echo $fila['foto_usuario']; ?>" width="100" height="100" alt="">
                                         <img src="<?php echo $_SESSION['foto_login']; ?>" width="100" height="100" alt=""> -->
                                     </div>
@@ -160,6 +165,9 @@ include("./modelos/DatosTablas/obtenerDatos.php");
         </tbody>
 
     </table>
+    <div>
+        <h3>aaaaaaa</h3>
+    </div>
 
 </div>
 </div>

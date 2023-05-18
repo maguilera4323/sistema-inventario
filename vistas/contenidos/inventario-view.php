@@ -8,7 +8,16 @@ if (session_status() == PHP_SESSION_NONE) {
 include("./modelos/DatosTablas/obtenerDatosInventario.php"); 
 ?>
 
-<h3 style="padding:3rem;"><i class="fas fa-warehouse"></i> &nbsp; INVENTARIO </h3>
+<div class="container-encabezado">
+<h3 style=""><i class="fas fa-warehouse"></i> &nbsp; INVENTARIO </h3>
+
+<div class="container-menu" style="">
+    <h5><i class="fas fa-home"></i>&nbsp; 
+    <a href="<?php echo SERVERURL?>home/"> Home </a>
+    / 
+    <a href="<?php echo SERVERURL?>inventario/"> Inventario </a></h5>
+</div>
+<hr>
 
 <div class="botones-proveedores">
 	<button type="submit" class="btn btn-danger mx-auto btn-lg"><i class="fas fa-file-pdf"></i> &nbsp;Descargar PDF</button>
@@ -18,8 +27,8 @@ include("./modelos/DatosTablas/obtenerDatosInventario.php");
     </a>
 </div>
 <br>
-<div class="table-responsive">
-    <table id="datos-usuario" class="table table-bordered table-striped text-center">
+<div class="table-responsive-md">
+    <table id="datos-usuario" class="table text-center table-striped datos-usuario">
         <thead>
             <tr>
                 <th>Nombre</th>

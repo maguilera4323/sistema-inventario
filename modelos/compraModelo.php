@@ -34,29 +34,15 @@
 
 
 
-		protected function actualizar_insumo_modelo($dato,$id){
-			$sql=ConexionBD::getConexion()->prepare("UPDATE insumos SET nom_insumo=?,categoria=?,cant_max=?,
+		protected function eliminarCompra($dato,$id){
+			$sql=ConexionBD::getConexion()->prepare("UPDATE compras SET estado_registro=?,categoria=?,cant_max=?,
 			cant_min=?, unidad_medida=? WHERE id_insumo=?");
-
-			$sql->bindParam(1,$dato['nombre']);
-			$sql->bindParam(2,$dato['cat']);	
-			$sql->bindParam(3,$dato['cant_max']);			
-			$sql->bindParam(4,$dato['cant_min']);			
-			$sql->bindParam(5,$dato['unid']);
-			$sql->bindParam(6,$id);
-			$sql->execute();
-			return $sql;
-		}
-
-
-
-		protected function eliminar_insumo_modelo($id){
-			$sql=ConexionBD::getConexion()->prepare("DELETE FROM insumos where id_insumo=?");
-				
 			$sql->bindParam(1,$id);
 			$sql->execute();
 			return $sql;
 		}
+
+
 
 		
 		
